@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+ul {
+  list-style-type: none;
+  font-size: 30px; }
+
+li {
+  display: inline; }
+
+nav {
+  overflow: hidden;
+  height: 60px;
+  background-color: black;
+  color: white;
+  position: fixed;
+  width: 100%;
+  top: 0; }
+
+.space {
+  height: 100px; }
+
+a {
+  text-decoration: none;
+  color: white; }
+
+/*# sourceMappingURL=main.css.map */
