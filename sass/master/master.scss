@@ -31,4 +31,27 @@ a {
     color: white;
 }
 
-#display {}
+.display {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: " . user user" " . video video" " . comm comm" " . foot foot";
+}
+
+.user {
+    grid-area: user;
+}
+
+.yt {}
+
+.video {
+    grid-area: video;
+}
+
+.comments {
+    grid-area: comm;
+}
+
+.foor {
+    grid-area: foot;
+}

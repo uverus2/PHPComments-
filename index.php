@@ -1,5 +1,11 @@
 
+<?php
+session_start();
+include('functions.php');
 
+$session = $_SESSION["gatekeeper"];
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,28 +27,29 @@
 
     </nav>
 
+    
+
     <div class="space"> </div>
 
-    <div id="grid">
+    <div class="grid">
     
     
+    <?php include 'header.php';?>
     
-    <div id="user"> </div>
-    <div id="video">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/GoW8Tf7hTGA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    <div class="video">
+    <iframe class="yt" width="560" height="315" src="https://www.youtube.com/embed/GoW8Tf7hTGA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 
     </div>
-    <div id="comments">
-    <form action="comment.php">
-        <textarea name="comment" id="" cols="30" rows="10"> 
-        
-        </textarea>
+    <div class="comments">
+    <form action="addComment.php">
+        <textarea name="comment" id="" cols="30" rows="10"></textarea>
+        <?php  echo "<input type='hidden' name='currUser'  value='$session' /> "; ?>
         <input type="submit" value="Add">
 
         </form>
     </div>
-    <footer></footer>
+    <footer class="foot" ></footer>
     
     
 </div>
