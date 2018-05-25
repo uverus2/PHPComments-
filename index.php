@@ -12,10 +12,10 @@ $session = $_SESSION["gatekeeper"];
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Comments</title>
     <link rel="stylesheet" href="css/main.css">
 </head>
-<body>
+<body onload="main()">
     
 <nav>
         <ul>
@@ -42,18 +42,30 @@ $session = $_SESSION["gatekeeper"];
 
     </div>
     <div class="comments">
-    <form action="addComment.php">
+    <form method="post" action="addComment.php">
         <textarea name="comment" id="" cols="30" rows="10"></textarea>
         <?php  echo "<input type='hidden' name='currUser'  value='$session' /> "; ?>
-        <input type="submit" value="Add">
+       <button id="click" > add </button> 
 
         </form>
     </div>
-    <footer class="foot" ></footer>
-    
-    
+    <footer class="foot" >
+
+
+ 
+    <?php
+    //include('showComment.php');
+    ?>
+
+    <div id="showComments">
+
+    </div>
+    </footer>
+
 </div>
 
+
+<script type="text/javascript" src="./js/main.js" ></script>
 
 </body>
 </html>
